@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <h1>Members</h1>
-        <ul>
-            {% for member in mymembers %}
-                <li><a href="{% url 'details' member.id %}">{{ member.firstname }} {{ member.lastname }}</a></li>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+{% extends "master.html" %}
+
+{% block title %}
+   My tennis club
+{% endblock %}   
+
+{% block content %}
+    <p><a href="/">HOME</a></p>
+    <h1>Members</h1>
+    <ul>
+        {% for member in mymembers %}
+            <li><a href="{% url 'details' member.id %}">{{ member.firstname }} {{ member.lastname }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}   
+
