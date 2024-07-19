@@ -8,4 +8,4 @@ class Member(models.Model):
     joined_date = models.DateField(null=True)
     
     def __str__(self) -> str:
-        return f"First Name: {self.firstname}, Last Name: {self.lastname}, Phone: {self.phone}, Joined on: {self.joined_date}"
+        return f"{self.firstname}, {self.lastname}, {self.phone}, {self.joined_date}"
