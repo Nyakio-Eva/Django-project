@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html>
     <body>
-        {% for fruit in fruits %}
-          <h1>{{ fruit }}</h1>
+     
+        <ul>
+          {% for y in mymembers %}
+            <li>{{ y.firstname }}</li>
 
-        {% endfor %}  
+          {% endfor %}  
+        </ul>
+     
 
-        
+      {% if greeting == 1 %}
+        <h1>Hello</h1>
+      {% else %}
+        <h1>Bye</h1>
+      {% endif %}
+
+      {% for x in cars %}
+        <h1>{{ x.brand }}</h1>
+        <p>{{ x.model }}</p>
+        <p>{{ x.year }}</p>
+      {% endfor %}  
+
+      <ul>
+        {% for x in emptytestobject %}
+          <li>{{ x.firstname }}</li>
+        {% empty %}
+          <li>No members</li>
+        {% endfor %}
+      </ul> 
+      
+
     </body>
 </html>

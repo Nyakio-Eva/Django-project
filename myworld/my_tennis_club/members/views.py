@@ -24,8 +24,27 @@ def details(request, id):
     return HttpResponse(template.render(context, request))
 
 def testing(request):
+    mymembers = Member.objects.all().values()
     template = loader.get_template('testing.html')
     context = {
-        'fruits': ['Apple', 'Banana', 'Cherry'],
+        'mymembers': mymembers,
+        'greeting': 1,
+        'cars': [
+      {
+        'brand': 'Ford',
+        'model': 'Mustang',
+        'year': '1964',
+      },
+      {
+        'brand': 'Ford',
+        'model': 'Bronco',
+        'year': '1970',
+      },
+      {
+        'brand': 'Volvo',
+        'model': 'P1800',
+        'year': '1964',
+      }],
+        'emptytestobject': [],
     }
     return HttpResponse(template.render(context, request))
