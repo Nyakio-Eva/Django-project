@@ -6,6 +6,7 @@
 {% endblock %}  
 
 {% block content %}
+    {% include 'mymenu.html' with me="EVA" sponsor="W3Schools" %}
     <h1>{{mymember.firstname}} {{mymember.lastname}}</h1>
     <p>Phone: {{mymember.phone}}</p>
     <p>Joined at: {{mymember.joined_date}}</p>

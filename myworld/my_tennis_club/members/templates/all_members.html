@@ -12,5 +12,9 @@
             <li><a href="{% url 'details' member.id %}">{{ member.firstname }} {{ member.lastname }}</a></li>
         {% endfor %}
     </ul>
+    {% include 'footer.html'%}
+    
 {% endblock %}   
+
+
 
